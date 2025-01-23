@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Paddle : MonoBehaviour
@@ -25,6 +24,8 @@ public class Paddle : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 movement = Vector3.up * vertInput * speed * Time.fixedDeltaTime;
-        rb.MovePosition(transform.position + movement);
+        Vector3 newPos = transform.position + movement;
+        newPos.y = Mathf.Clamp(newPos.y, -4f, 4f);
+        rb.MovePosition(newPos);
     }
 }
