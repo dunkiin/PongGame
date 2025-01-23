@@ -1,34 +1,65 @@
+using System.Net.Http.Headers;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private Rigidbody rb;
-    public float speed = 1.0f;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] float speed = 7.0f;
+    public float minX = -13;
+    public float maxX = 13;
+    public int scoreP1;
+    public int scoreP2;
 
-    int minX;
-    int maxX;
-
-    int scoreP1;
-    int scoreP2;
-
-    private void Start()
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        Launch();
     }
 
-    void Reset()
+    private void Update()
     {
- 
+        if (transform.position.x > maxX)
+        {
+            scoreP1++;
+            Reset();
+        }
+        else if (transform.position.x < minX)
+        {   
+            scoreP2++;
+            Reset();
+        }
     }
 
-    void Launch(Vector3 direction, float speed)
+    private void Reset()
     {
-        
+        rb.linearVelocity = Vector3.zero;
+        transform.position = Vector3.zero;
+        Launch();
     }
 
-    void GetRandomBallDirection()
+    void Launch()
     {
-        
+        Vector3 movement = GetRandomBallDirection() * speed;
+        rb.AddForce(movement, ForceMode.Impulse);
+    }
+
+    Vector3 GetRandomBallDirection()
+    {
+        float x = 1;
+        float y = 1;
+
+        if (Random.Range(0, 2) == 0)
+        {
+            x = -1f;
+        }
+
+        if (Random.Range(0, 2) == 0)
+        {
+            y = -1f;
+        }
+
+        Vector3 dir = new Vector3(x, y, 0);
+        return dir;
     }
 
 

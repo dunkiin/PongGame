@@ -56,5 +56,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "PongGame.sln"
+    "dotnet.defaultSolution": "PongGame.sln",
+    "cSpell.words": [
+        "Rigidbody"
+    ]
 }
