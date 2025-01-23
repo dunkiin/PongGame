@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 284278637}
   - component: {fileID: 284278636}
   - component: {fileID: 284278640}
+  - component: {fileID: 284278641}
   m_Layer: 0
   m_Name: Left Paddle
   m_TagString: Untagged
@@ -241,7 +242,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vertInputAxis: VerticalP1
-  rb: {fileID: 0}
+  rb: {fileID: 284278641}
+--- !u!54 &284278641
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284278635}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &330704803
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +903,7 @@ GameObject:
   - component: {fileID: 1679775975}
   - component: {fileID: 1679775974}
   - component: {fileID: 1679775978}
+  - component: {fileID: 1679775979}
   m_Layer: 0
   m_Name: Right Paddle
   m_TagString: Untagged
@@ -983,8 +1012,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34380179fd4a4969add835c6160c245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vertInputAxis: VerticalP1
-  rb: {fileID: 0}
+  vertInputAxis: VerticalP2
+  rb: {fileID: 1679775979}
+--- !u!54 &1679775979
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679775973}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1858378612
 GameObject:
   m_ObjectHideFlags: 0
