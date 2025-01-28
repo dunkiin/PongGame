@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    [SerializeField] 
-    private string vertInputAxis = "VerticalP1";
-    [SerializeField]
-    Rigidbody rb;
+    [SerializeField] private string vertInputAxis = "VerticalP1";
+    [SerializeField] Rigidbody rb;
     float vertInput;
     float speed = 10.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    // void Start()
+    // {
         
-    }
+    // }
 
     // Update is called once per frame
     void Update()
