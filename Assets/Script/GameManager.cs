@@ -13,23 +13,26 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        ball.Reset();
+        ball.Launch();
+        uiManager.UpdateScore(scoreP1, scoreP2);
     }
 
     private void Update()
     {
-        if (transform.position.x > courtMaxX)
+        if (ball.transform.position.x > courtMaxX)
         {
             scoreP1++;
+            uiManager.UpdateScore(scoreP1, scoreP2);
             ball.Reset();
         }
-        else if (transform.position.x < courtMinX)
+        else if (ball.transform.position.x < courtMinX)
         {   
             scoreP2++;
+            uiManager.UpdateScore(scoreP1, scoreP2);
             ball.Reset();
         }
-        
-        uiManager.UpdateScore(scoreP1, scoreP2);
+
     }
 
 

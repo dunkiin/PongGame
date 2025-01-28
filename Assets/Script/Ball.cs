@@ -21,7 +21,7 @@ public class Ball : MonoBehaviour
     }
 
 
-    void Launch()
+    public void Launch()
     {
         Vector3 movement = GetRandomBallDirection() * speed;
         rb.AddForce(movement, ForceMode.Impulse);
