@@ -1219,8 +1219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbb0d5c93c8e46a29b2fe2165176ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 0}
-  ui: {fileID: 0}
+  ball: {fileID: 1858378618}
+  ui: {fileID: 2079886434}
   courtMinX: -13
   courtMaxX: 13
   scoreP1: 0
@@ -1352,5 +1352,5 @@ SceneRoots:
   - {fileID: 284278639}
   - {fileID: 760254041}
   - {fileID: 330704807}
-  - {fileID: 2079886433}
   - {fileID: 737997089}
+  - {fileID: 2079886433}
