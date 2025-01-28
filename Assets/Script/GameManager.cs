@@ -11,6 +11,28 @@ public class GameManager : MonoBehaviour
     public int scoreP2;
 
 
+    void Start()
+    {
+
+    }
+
+    private void Update()
+    {
+        if (transform.position.x > courtMaxX)
+        {
+            scoreP1++;
+            ball.Reset();
+        }
+        else if (transform.position.x < courtMinX)
+        {   
+            scoreP2++;
+            ball.Reset();
+        }
+        
+        uiManager.UpdateScore(scoreP1, scoreP2);
+    }
+
+
 
 
 }
