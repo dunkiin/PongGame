@@ -7,17 +7,15 @@ public class Ball : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] float speed = 7.0f;
 
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     public void Reset()
     {
         rb.linearVelocity = Vector3.zero;
         transform.position = Vector3.zero;
-        Launch();
-    }
- 
-
-    void Start()
-    {
-        Launch();
     }
 
 
@@ -29,19 +27,6 @@ public class Ball : MonoBehaviour
 
     Vector3 GetRandomBallDirection()
     {
-        // float x = 1;
-        // float y = 1;
-
-        // if (Random.Range(0, 2) == 0)
-        // {
-        //     x = -1f;
-        // }
-
-        // if (Random.Range(0, 2) == 0)
-        // {
-        //     y = -1f;
-        // }
-
         float x = Random.Range(0, 2) == 0 ? -1f : 1f;
         float y = Random.Range(0, 2) == 0 ? -1f : 1f;   
 
