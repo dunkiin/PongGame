@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
 
     public void Reset()
     {
+        // rb.linearVelocity = Vector3.zero;
         rb.linearVelocity = Vector3.zero;
         transform.position = Vector3.zero;
     }
