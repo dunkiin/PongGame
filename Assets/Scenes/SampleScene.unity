@@ -765,6 +765,7 @@ GameObject:
   - component: {fileID: 1421595616}
   - component: {fileID: 1421595618}
   - component: {fileID: 1421595617}
+  - component: {fileID: 1421595619}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -890,6 +891,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421595615}
   m_CullTransparentMesh: 1
+--- !u!114 &1421595619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421595615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf7b60c6b6454fcc824bbaaf9bce180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 1421595617}
 --- !u!1 &1679775973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1069,7 @@ GameObject:
   - component: {fileID: 1858378613}
   - component: {fileID: 1858378617}
   - component: {fileID: 1858378618}
+  - component: {fileID: 1858378619}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -1192,8 +1207,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1858378617}
   speed: 7
-  minX: -13
-  maxX: 13
+--- !u!114 &1858378619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858378612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbb0d5c93c8e46a29b2fe2165176ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 0}
+  ui: {fileID: 0}
+  courtMinX: -13
+  courtMaxX: 13
   scoreP1: 0
   scoreP2: 0
 --- !u!1 &2079886429

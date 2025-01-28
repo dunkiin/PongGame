@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 
     public float courtMinX = -13;
     public float courtMaxX = 13;
-    public int scoreP1;
-    public int scoreP2;
+    public int scoreP1 = 0;
+    public int scoreP2 = 0;
 
 
     void Start()
