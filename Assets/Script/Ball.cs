@@ -6,29 +6,6 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
     [SerializeField] float speed = 7.0f;
-    public float minX = -13;
-    public float maxX = 13;
-    public int scoreP1;
-    public int scoreP2;
-
-    void Start()
-    {
-        Launch();
-    }
-
-    private void Update()
-    {
-        if (transform.position.x > maxX)
-        {
-            scoreP1++;
-            Reset();
-        }
-        else if (transform.position.x < minX)
-        {   
-            scoreP2++;
-            Reset();
-        }
-    }
 
     public void Reset()
     {
@@ -36,6 +13,13 @@ public class Ball : MonoBehaviour
         transform.position = Vector3.zero;
         Launch();
     }
+ 
+
+    void Start()
+    {
+        Launch();
+    }
+
 
     void Launch()
     {

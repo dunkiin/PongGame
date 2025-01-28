@@ -9,4 +9,19 @@ public class UIManager : MonoBehaviour
     {
         score.text = scoreP1 + " : " + scoreP2;
     }
+
+
+    private void Update()
+    {
+        if (transform.position.x > maxX)
+        {
+            scoreP1++;
+            Reset();
+        }
+        else if (transform.position.x < minX)
+        {   
+            scoreP2++;
+            Reset();
+        }
+    }
 }
