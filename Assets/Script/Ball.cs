@@ -28,6 +28,15 @@ public class Ball : MonoBehaviour
 
     Vector3 GetRandomBallDirection()
     {
+        //if (Random.Range(0, 2) == 0)
+        //{
+        //    x = -1f;
+        //}
+        //if (Random.Range(0, 2) == 0)
+        //{
+        //    y = -1f;
+        //}
+
         float x = Random.Range(0, 2) == 0 ? -1f : 1f;
         float y = Random.Range(0, 2) == 0 ? -1f : 1f;   
 
