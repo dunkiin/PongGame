@@ -9,7 +9,7 @@ public class Paddle : MonoBehaviour
 
     void Update()
     {
-        vertInput = Input.GetAxis(vertInputAxis);
+        vertInput = Input.GetAxisRaw(vertInputAxis);
     }
 
     private void FixedUpdate()
